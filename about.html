@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- aos link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navigation-wrap">
+            <div class="container" data-aos="fade-down">
+                <a class="navbar-brand" href="#"><img decoding="async" src="/img/logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/explore-food.html">Explore Foods</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                  <a class="nav-link" href="#testimonial">Reviews</a>
+                </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login.html">Log in</a>
+                        </li>
+                        <li><button class="main-btn"> <a href="/contact.html">9380 345 123</a></button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2" data-aos="fade-down">
+                                <h2>About US</h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+        <!--? About-2 Area Start -->
+        <div class="about-area2 section-padding30">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <!-- about-img -->
+                        <div class="about-img " data-aos="fade-right">
+                            <img src="/img/gallery/about2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-caption mb-50" data-aos="fade-left">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle mb-35">
+                                <span>About Our Restaurant</span>
+                                <h2>We Provide Good Food For Your Family!</h2>
+                            </div>
+                            <p class="pera-top">Ut enim acgsd minim veniam, quxcis nostrud exercitation ullamco laboris
+                                nisi ufsit aliquip ex ea commodo consequat is aute irure m, quis nostrud exer</p>
+
+                            <p class="mb-65 pera-bottom">There are many variations of passages of Lorem Ipsum available,
+                                but the majority have suffered alteration in some form, by injected our, or randomised
+                                words which don't look even slightly believab If you are going to use a passage.</p>
+                            <a href="about.html" class="main-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Booking Room Start -->
+        <div class="booking-area section-bg pt-120 pb-130" data-background="/img/gallery/section_bg04.png;"
+            style="background: url(/img/gallery/section_bg04.png) no-repeat center;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="cl-xl-7 col-lg-8 col-md-10">
+                        <!-- Section Title -->
+                        <div class="section-tittle text-center mb-40" data-aos="fade-down">
+                            <span>About Our Restaurant</span>
+                            <h2>Book A Table</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center" data-aos="fade-up">
+                    <div class="col-12">
+                        <form id="bookingForm">
+                            <div class="booking-wrap d-flex justify-content-between align-items-center">
+                                <!-- Single Select Box -->
+                                <div class="single-select-box mb-30">
+                                    <div class="select-this">
+                                        <div class="select-itms">
+                                            <div class="select-icon">
+                                                <i class="ti-user"></i>
+                                            </div>
+                                            <select name="person" id="select1" required>
+                                                <option value="">Select Person</option>
+                                                <option value="1">Person 1</option>
+                                                <option value="2">Person 2</option>
+                                                <option value="3">Person 3</option>
+                                                <option value="4">Person 4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Date Picker -->
+                                <div class="single-select-box mb-30">
+                                    <div class="boking-datepicker">
+                                        <input id="datepicker1" type="date" placeholder="Date" required />
+                                    </div>
+                                </div>
+                                <!-- Time Picker -->
+                                <div class="single-select-box mb-30">
+                                    <div class="boking-datepicker">
+                                        <input id="timepicker" type="time" placeholder="Time" required />
+                                    </div>
+                                </div>
+                                <!-- Book Now Button -->
+                                <div class="single-select-box mb-30">
+                                    <button type="submit" class="main-btn">Book Now</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="notification" style="display:none; margin-top: 20px;" class="alert alert-success">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Booking Room End-->
+
+
+
+
+        <!--? About Area Start -->
+        <div class="about-low-area section-padding30">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-caption mb-50" data-aos="fade-right">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle mb-35">
+                                <span>Discover Your Test</span>
+                                <h2>We Provide Good Food For Your Family!</h2>
+                            </div>
+                            <p>Ut enim acgsd minim veniam, quxcis nostrud exercitation ullamco laboris nisi ufsit
+                                aliquip ex ea commodo consequat is aute irure m, quis nostrud exer.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                                <div class="single-caption mb-20">
+                                    <div class="caption-icon">
+                                        <span class="flaticon-restaurant"></span>
+                                    </div>
+                                    <div class="caption">
+                                        <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                                <div class="single-caption mb-20">
+                                    <div class="caption-icon">
+                                        <span class="flaticon-tools-and-utensils-1"></span>
+                                    </div>
+                                    <div class="caption">
+                                        <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                                <div class="single-caption mb-20">
+                                    <div class="caption-icon">
+                                        <span class="flaticon-hat"></span>
+                                    </div>
+                                    <div class="caption">
+                                        <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                                <div class="single-caption mb-20">
+                                    <div class="caption-icon">
+                                        <span class="flaticon-restaurant"></span>
+                                    </div>
+                                    <div class="caption">
+                                        <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12" data-aos="fade-left">
+                        <!-- about-img -->
+                        <div class="about-img ">
+                            <img src="/img/about.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Area End -->
+        <!--? About-3 Start -->
+        <div class="about-area3 pt-180 pb-170 section-bg"
+            style="background: url('/img/gallery/section_bg03.png') no-repeat center;">
+            <div class="container">
+                <div class="row justify-content-end" data-aos="fade-left">
+                    <div class="col-xl-6 col-lg-6 col-md-9 col-sm-11">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle section-tittle2 mb-40" data-aos="fade-down">
+                            <span>About Our Restaurant</span>
+                            <h2>We Provide Good Food For Your Family!</h2>
+                            <p>Ut enim acgsd minim veniam, quxcis nostrud exercitation ullamco laboris nisi ufsit
+                                aliquip ex ea commodo consequat is aute irure m, quis nostrud exer.</p>
+                        </div>
+                        <!--Hero form -->
+                        <form action="#" class="search-box">
+                            <div class="input-form">
+                                <input type="text" placeholder="Your Email">
+                            </div>
+                            <div class="search-form">
+                                <button class="main-btn">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About-3 End -->
+        <!-- About-2 Area End -->
+        <!--? Our Services Start -->
+        <div class="our-services section-padding30">
+            <div class="container">
+                <div class="row justify-content-sm-center">
+                    <div class="cl-xl-7 col-lg-8 col-md-10">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-70" data-aos="fade-down">
+                            <span>Servicees We Offer</span>
+                            <h2>Our Best Services</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-right">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-restaurant"></span>
+                                <span class="fas fa-chef-hat service-icon"></span> <!-- Icon for Best Chef -->
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Best Chef</a></h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up">
+                        <div class="single-services active text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-tools-and-utensils-1"></span>
+                                <span class="fas fa-utensils service-icon"></span> <!-- Icon for Quality Food -->
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Quality Food</a></h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-left">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-restaurant"></span>
+                                <span class="fas fa-cooking-pot service-icon"></span> <!-- Icon for Perfect Cook -->
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Perfect Cook</a></h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Services End -->
+
+
+        <!-- Footer section -->
+
+
+        <footer id="footer">
+            <div class="footer py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <a class="footer-link" href="/index.html">Home</a>
+                            <a class="footer-link" href="/about.html">About</a>
+                            <a class="footer-link" href="/explore-food.html">Explore-food</a>
+                            <a class="footer-link" href="/contact.html">Contact</a>
+                            <div class="footer-social pt-4 text-center">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="footer-copy">
+                                <div class="copy-right text-center pt-5">
+                                    <p class="text-light">© 2024 Vishal. All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+        <script src="/js/bootstrao.min.js"></script>
+        <script src="/js/script.js"></script>
+
+
+
+</body>
+
+</html>

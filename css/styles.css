@@ -1,0 +1,1034 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a{
+  color: white;
+}
+a,
+a:hover {
+  text-decoration: none;
+  
+}
+
+a:hover {
+  color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*===== Variable Define =====*/
+:root {
+  --primary-color: #ff5600;
+  --secondry-color: #16161a;
+  --third-color: #f98169;
+  --white-color: #fff;
+  --text-color: #555;
+  --text-gray: #999;
+  --black-color: #000;
+  --primary-font: "Roboto", sans-serif;
+  --secondry-font: "Quicksand", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/*  
+==========================================
+   Custom CSS Design
+==========================================
+*/
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: var(--secondry-color);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  color: var(--secondry-color);
+  line-height: 3rem;
+}
+
+h4 {
+  color: var(--secondry-color);
+  font-family: var(--secondry-font);
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  color: var(--primary-color);
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.main-btn{
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  color: var(--white-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+
+
+
+.main-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+
+
+
+
+.wrapper {
+  padding-top: 8.25rem;
+  padding-bottom: 8.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2 {
+  color: var(--white-color);
+}
+
+/*
+==========================================
+   Header Design
+==========================================
+*/
+.navigation-wrap {
+  position:fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: white;
+  box-shadow: 0px 2.935px 10px rgb(173, 172, 172);
+
+}
+.navigation-wrap .nav-item {
+  padding: 0 0.625rem;
+  transition: all 200ms linear;
+}
+.navbar-toggler:focus {
+  outline: unset;
+  border: unset;
+  box-shadow: none;
+}
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+ .nav-link :hover{
+  color:var(--text-color);
+}
+.navigation-wrap .main-btn {
+  padding: 0.3125rem 1.4375rem;
+  box-shadow: none;
+  margin-left: 0.625rem;
+}
+
+/* Change navbar styling on scroll */
+
+.navigation-wrap.scroll-on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white-color);
+  box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.09);
+  transition: all 0.15s ease-in-out 0s;
+}
+
+/*
+==========================================
+   top-banner Design
+==========================================
+*/
+.top-banner {
+  width: 100%;
+  background: url("/img/h1_hero.png") no-repeat center;
+  background-size: cover;
+  padding: 16.875rem 0 9.375rem;
+}
+
+/*
+==========================================
+  counter Design
+==========================================
+*/
+.counter-section {
+  background-color: var(--primary-color);
+  padding: 2.5rem 0;
+}
+.counter-section p {
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+/*
+==========================================
+ about section Design
+==========================================
+*/
+.about-section {
+  background: var(--white-color);
+}
+.about-section .card,
+.about-section .card img {
+  border-radius: 0.625rem;
+}
+.about-section .text-sec {
+  padding-left: 2rem;
+}
+
+
+
+.img-fluid {
+  max-width: 75%;
+  border-radius: 10rem;
+}
+/*
+==========================================
+ food type section Design
+==========================================
+*/
+.food-type {
+  padding-top: 3.25rem;
+}
+.food-type ul li {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 32px;
+  position: relative;
+  margin-left: 30px;
+}
+.food-type ul li::before {
+  position: absolute;
+  left: -2.1875rem;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+.story-section {
+  width: 100%;
+  height: 28.125rem;
+  background: url("/img/bg-2.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 100px;
+  text-align: center;
+}
+.story-section h2 {
+  color: var(--primary-color);
+}
+
+/*
+==========================================
+ explore food section Design
+==========================================
+*/
+.explore-food .card {
+  border: none;
+  background-color: transparent;
+  border-radius: 0.9375rem;
+  box-shadow: 0px 0px 15px lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.explore-food .card .img-fluid {
+  border-radius: 0.9375rem;
+  object-fit: contain;
+  width: 100%;
+}
+.explore-food .card span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid #eee;
+}
+.explore-food .card span del {
+  color: var(--text-gray);
+  margin-left: 0.5rem;
+}
+
+/*
+==========================================
+ testimonial section Design
+==========================================
+*/
+.testimonial-section {
+  background-color: var(--primary-color);
+}
+.testimonial-section .carousel-item {
+  margin-top: 3rem;
+  padding: 10rem 3.125rem;
+  background-color: var(--white-color);
+  border-radius: 0.9375rem;
+  text-align: center;
+}
+.testimonial-section .carousel-caption img {
+  max-width: 5rem;
+  border-radius: 50%;
+  padding: 0.3125rem;
+}
+
+.testimonial-section .carousel-item .carousel-caption p {
+  font-size: 1.3125rem;
+  line-height: 2.0625rem;
+  padding: 0 11% 0.625rem;
+}
+.testimonial-section .carousel-indicators {
+  bottom: -2.8125rem;
+}
+.testimonial-section .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  margin-right: 1rem;
+  opacity: 0.2;
+}
+.testimonial-section .carousel-indicators button.active {
+  opacity: 1;
+}
+
+
+
+/* Book table */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .booking-area {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 575px) {
+  .booking-area {
+    padding: 70px 0;
+  }
+}
+.booking-area .booking-wrap {
+  padding: 70px 60px 40px 60px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 8px 79px 0px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .booking-area .booking-wrap {
+    padding: 50px 46px 20px 42px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .booking-area .booking-wrap {
+    padding: 50px 30px 13px 30px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .booking-area .booking-wrap {
+    padding: 50px 30px 13px 30px;
+  }
+}
+@media (max-width: 575px) {
+  .booking-area .booking-wrap {
+    padding: 50px 20px 13px 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .booking-area .booking-wrap {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .booking-area .booking-wrap {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 575px) {
+  .booking-area .booking-wrap {
+    flex-wrap: wrap;
+  }
+}
+.booking-area .booking-wrap .single-select-box {
+  width: 23%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .booking-area .booking-wrap .single-select-box {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .booking-area .booking-wrap .single-select-box {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .booking-area .booking-wrap .single-select-box {
+    width: 48%;
+  }
+}
+@media (max-width: 575px) {
+  .booking-area .booking-wrap .single-select-box {
+    width: 100%;
+  }
+}
+.booking-area .booking-wrap .nice-select {
+  color: #9d9d9d;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-left: 49px;
+  padding-right: 45px;
+  text-align: left !important;
+  line-height: 69px;
+  border: 0;
+  height: 65px;
+  width: 100%;
+}
+.booking-area .booking-wrap .nice-select::after {
+  border-bottom: 2px solid #a3a3a3;
+  border-right: 2px solid #a3a3a3;
+  height: 7px;
+  right: 41px;
+  width: 7px;
+}
+.booking-area .booking-wrap .nice-select.open .list {
+  width: 100%;
+  border-radius: 0;
+}
+.booking-area .booking-wrap .nice-select .option {
+  color: #a3a3a3;
+}
+.booking-area .booking-wrap .select-itms {
+  position: relative;
+}
+.booking-area .booking-wrap .select-icon {
+  position: absolute;
+  z-index: 1;
+  left: 11px;
+  top: 20px;
+  color: #9d9d9d;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+==========================================
+FAQ section Design
+==========================================
+*/
+.faq h4 span {
+  color: var(--primary-color);
+  font-size: 1.875rem;
+  margin-right: 0.3125rem;
+}
+.book-food {
+  width: 100%;
+  background: url("../images/bg/bg-3.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 71.9125px;
+  padding: 4.375rem 0;
+}
+
+
+
+/* Form Control */
+.newsletter {
+  width: 55%;
+  margin: 0 auto;
+}
+.newsletter .form-control {
+  height: 4rem;
+  margin-bottom: 2rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  border: 0.1875rem solid var(--text-gray);
+  color: var(--black-color);
+  font-weight: 700;
+}
+.newsletter .form-control:hover,
+.newsletter .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+
+
+
+
+/*
+==========================================
+footer section Design
+==========================================
+*/
+.footer {
+  background: var(--primary-color);
+}
+.footer .footer-link {
+  font-size: 1rem;
+  color: var(--white-color);
+  padding: 0 1.875rem;
+}
+.footer .footer-link:hover {
+  color: var(--white-color) !important;
+}
+.footer a i {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  padding: 0 1rem;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  /* about section */
+}
+
+@media (max-width: 991px) {
+  /*custom classes  */
+  .text-content {
+    width: 100%;
+  }
+
+  /* navbar brand */
+  .navigation-wrap .navbar-brand img {
+    height: 3.8125rem;
+  }
+  .navigation-wrap {
+    text-align: center;
+    background-color: var(--white-color);
+  }
+  .navigation-wrap .nav-link {
+    line-height: 1.875rem;
+  }
+  /* Banner Design */
+  .top-banner {
+    padding: 9.375rem 0 9.375rem;
+  }
+
+  /* carousel design */
+  .testimonial-section .carousel-item .carousel-caption p {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  /* custom css */
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 2.0625rem;
+  }
+
+  /* top banner */
+  .top-banner {
+    padding: 10.875rem 0 9.375rem;
+  }
+
+  /* story section */
+  .story-section {
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  /* carousel design */
+  .testimonial-section .carousel-item {
+    padding: 11rem 3.125rem;
+  }
+
+  /* newslettar */
+  .newsletter {
+    width: 75%;
+  }
+  .newsletter .main-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* footer link */
+  .footer .footer-link,
+  .footer a i {
+    padding: 0 0.7rem;
+  }
+}
+
+@media (max-width: 330px) {
+  /* carousel design */
+  .testimonial-section .carousel-item {
+    padding: 13rem 3.125rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+=====================================
+about Page
+===================================
+*/
+
+.aboutbanner-section {
+  width: 100%;
+  height: 50.125rem;
+  background: url("/img/about.png") no-repeat center;
+  background-size: cover;
+  padding-top: 100px;
+  text-align: center;
+  margin-top: 20rem;
+}
+.aboutbanner-section h2 {
+  color: var(--primary-color);
+}
+
+
+
+
+/* Book tabel */
+ .single-select-box {
+  width: 200px;
+  margin: 10px;
+}
+
+.select-this {
+  position: relative;
+  display: inline-block;
+}
+
+.select-itms {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+
+.select-itms select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* padding: 10px; */
+  font-size: 16px;
+  color: #333;
+ 
+ 
+} 
+/*
+ .select-itms select:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+.select-icon {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  font-size: 18px;
+  color: #666;
+}
+
+.boking-datepicker {
+  width: 200px;
+  margin: 10px;
+}
+
+.boking-datepicker input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.boking-datepicker input:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 24px; /* Adjust size as needed */
+  color: #333; /* Change color as desired */
+  margin-top: 10px; /* Space between icon and text */
+}
+
+/* ======================================================== */
+
+/* explor food */
+.explore-food {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  margin-top: 5rem;
+}
+
+.section-title{
+  color: var(--black-color);
+}
+
+.food-box {
+  margin-bottom: 30px;
+}
+
+.food-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.food-box h4 {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.food-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* ==============================================================
+                      menu page
+================================================================
+*/
+
+/* menu banner start */
+.gallery-area{
+  margin-top: 5rem;
+}
+.food-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: transform 0.8s;
+  box-shadow: 0px 0px 10px lightgray;
+  cursor: pointer;
+}
+
+.food-box:hover{
+  transform: scale(1.01);
+  box-shadow: 0px 0px 15px rgb(173, 173, 173);
+}
+
+.food-box img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.food-box h4 {
+  margin: 15px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.food-box p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: var(--primary-color); /* Bootstrap danger color */
+  font-weight: bold;
+}
+
+.price del {
+  color: #999; /* Color for the original price */
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+
+
+
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+/* image slider */
+.top-selling-dices {
+  margin-bottom: 20rem;
+  margin-top: 10rem;
+}
+
+.dice-slider {
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+}
+
+.dice-slider-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+.dice-slide {
+  flex: 0 0 100px;
+  margin: 10px;
+  width: 100%;
+}
+
+.dice-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.dice-slide img {
+  width: 20em;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dice-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dice-info h4 {
+  color: white; /* Name color */
+  margin: 0; /* Remove default margin */
+}
+
+.dice-info p {
+  color: orange; /* Price color */
+  margin: 0; /* Remove default margin */
+}
+
+.dice-content:hover img {
+  transform: scale(1.1);
+}
+
+.dice-content:hover .dice-info {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+/*====================================================== 
+Contact page 
+========================================================
+*/
+
+.slider-area{
+  margin-top: 6rem;
+}
+
+/* map section start */
+
+.map-section {
+    margin: 4rem 0;
+}
+
+.map-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    margin: 40px 0;
+}
+
+.contact-form-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+  height: 4rem;
+  margin-bottom: 2rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  border: 0.1875rem solid var(--text-gray);
+  color: var(--black-color);
+  font-weight: 700;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px lightgray;
+}
+
+/* map section end */

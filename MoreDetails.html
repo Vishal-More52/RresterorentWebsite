@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/more_details.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center">User Details</h2>
+    <form id="orderForm" class="mt-4">
+        <!-- Step 1: Your Information -->
+        <div class="form-step form-step-active">
+            <h4>Your Information</h4>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" id="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" pattern="^\d{10}$" required>
+                <small class="form-text text-muted">Please enter a 10-digit phone number.</small>
+            </div>
+            <button type="button" class="btn btn-primary next-btn">Next</button>
+        </div>
+
+        <!-- Step 2: Delivery Information -->
+        <div class="form-step">
+            <h4>Delivery Address</h4>
+            <div class="form-group">
+                <label for="addressLine1">Address Line 1</label>
+                <input type="text" class="form-control" id="addressLine1" placeholder="Street address" required>
+            </div>
+            <div class="form-group">
+                <label for="addressLine2">Address Line 2</label>
+                <input type="text" class="form-control" id="addressLine2" placeholder="Apartment, suite, etc.">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" required>
+            </div>
+            <div class="form-group">
+                <label for="zip">Zip Code</label>
+                <input type="text" class="form-control" id="zip" pattern="^\d{5}$" required>
+                <small class="form-text text-muted">Please enter a 5-digit zip code.</small>
+            </div>
+            <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+            <button type="button" class="btn btn-primary next-btn">Next</button>
+        </div>
+
+        <!-- Step 3: Order Details -->
+        <div class="form-step">
+            <h4>Order Details</h4>
+            <div class="form-group">
+                <label for="menuItems">Menu Selection</label>
+                <textarea class="form-control" id="menuItems" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="specialRequests">Special Requests</label>
+                <textarea class="form-control" id="specialRequests" rows="3" placeholder="Any special instructions?"></textarea>
+            </div>
+            <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+            <button type="button" class="btn btn-primary next-btn">Next</button>
+        </div>
+
+        <!-- Step 4: Payment Information -->
+        <div class="form-step">
+            <h4>Payment Information</h4>
+            <div class="form-group">
+                <label for="cardNumber">Credit/Debit Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Card number" pattern="^\d{16}$" required>
+                <small class="form-text text-muted">Please enter a 16-digit card number.</small>
+            </div>
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date</label>
+                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" class="form-control" id="cvv" pattern="^\d{3}$" required>
+                <small class="form-text text-muted">Please enter a 3-digit CVV.</small>
+            </div>
+            <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+            <button type="submit" class="btn btn-success">Submit Order</button>
+        </div>
+    </form>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="alert alert-success mt-3"></div>
+    <!-- Error Message -->
+    <div id="errorMessage" class="alert alert-danger mt-3"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const steps = document.querySelectorAll(".form-step");
+        const nextBtns = document.querySelectorAll(".next-btn");
+        const prevBtns = document.querySelectorAll(".prev-btn");
+        const form = document.getElementById("orderForm");
+        const successMessage = document.getElementById("successMessage");
+        const errorMessage = document.getElementById("errorMessage");
+        let currentStep = 0;
+
+        function showStep(step) {
+            steps.forEach((s, index) => {
+                s.classList.toggle("form-step-active", index === step);
+            });
+        }
+
+        nextBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                if (currentStep < steps.length - 1) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            });
+        });
+
+        prevBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                if (currentStep > 0) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
+        });
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            successMessage.innerHTML = "Your order has been submitted successfully!";
+            errorMessage.style.display = "none";
+            successMessage.style.display = "block";
+            form.reset();
+            currentStep = 0;
+            showStep(currentStep);
+        });
+
+        showStep(currentStep);
+    });
+
+</script>
+</body>
+</html>

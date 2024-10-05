@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/Login_and_registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Add Font Awesome -->
+
+    <style>
+        .back-home {
+            margin-bottom: 2rem; /* Space below the icon */
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center">Sign Up</h2>
+                        <form id="sign-up-form" action="/login.html">
+                            <a href="index.html" class="back-home">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Home
+                             </a>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                            <p>I already have an account ? <a href="login.html">Log in</a></p>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+    $('#sign-up-form').submit(function(e) {
+        e.preventDefault();
+
+        var username = $('#username').val();
+        var email = $('#email').val();
+        var password = $('#password').val();
+        var confirmPassword = $('#confirm-password').val();
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
+
+        // Send data to server using AJAX
+        $.ajax({
+            type: 'POST',
+            url: '/sign-up',
+            data: {
+                username: username,
+                email: email,
+                password: password
+            },
+            success: function(data) {
+                console.log(data);
+                alert('Sign up successful!');
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+                alert('Error signing up');
+            }
+        });
+    });
+});
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

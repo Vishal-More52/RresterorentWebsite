@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+}
+h2 {
+    margin-bottom: 20px;
+}
+.form-step {
+    display: none;
+}
+.form-step-active {
+    display: block;
+}
+button {
+    margin-top: 20px;
+}
+textarea {
+    resize: none;
+}
+#successMessage, #errorMessage {
+    display: none;
+}
